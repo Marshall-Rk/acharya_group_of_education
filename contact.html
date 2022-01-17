@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -90,11 +90,7 @@
 	   
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="project.html" class="nav-link">Projects</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>	        	
 	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -148,15 +144,15 @@
 
             <form method="POST" id="frmSubmit" class="p-5 bg-white">
               
-              <h2 class="h4 text-black mb-5">GET IN TOUCH!</h2> 
+              
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">Full Name</label>
+                  <label class="text-dark" for="fname">Full Name</label>
                   <input type="text" id="fname" class="form-control" name="name" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="text-black" for="lname">Phone no.</label>
+                  <label class="text-dark" for="lname">Phone no.</label>
                   <input type="text" id="lname" class="form-control" name="phone" required>
                 </div>
               </div>
@@ -164,7 +160,7 @@
               <div class="row form-group">
                 
                 <div class="col-md-12">
-                  <label class="text-black" for="email">Email</label> 
+                  <label class="text-dark" for="email">Email</label> 
                   <input type="email" id="email" class="form-control" name="email" required>
                 </div>
               </div>
@@ -172,14 +168,14 @@
               <div class="row form-group">
                 
                 <div class="col-md-12">
-                  <label class="text-black" for="subject">Qualification</label> 
+                  <label class="text-dark" for="subject">Qualification</label> 
                   <input type="subject" id="subject" class="form-control" name="qualification" required>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="text-black" for="message">Address</label> 
+                  <label class="text-dark" for="message">Address</label> 
                   <textarea name="address" id="message" cols="30" rows="7" class="form-control" placeholder="Write your Address with pincode..."></textarea>
                 </div>
               </div>
@@ -195,7 +191,7 @@
             <script>
               jQuery('#frmSubmit').on('submit',function(e){
               e.preventDefault();
-              jQuery('#msg').html('Please wait...');
+              jQuery('#msg').html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i> Please wait...');
               jQuery('#btnSubmit').attr('disabled',true);
               jQuery.ajax({
                 url:'https://script.google.com/macros/s/AKfycbyRDFgl06Elo3G5oZt1y6_Rpl2m4n17jhjj2N7bGTZ_EYK4mgvgO2TytKB7pzVcrGMIoA/exec',
