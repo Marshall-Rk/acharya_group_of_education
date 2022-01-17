@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -51,7 +51,7 @@
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    			<a class="navbar-brand" href="index.php"><h5 style="font-weight: bold;"> ACHARYA GROUP OF EDUCATION</h5></a>
+    			<a class="navbar-brand" href="index.html"><h5 style="font-weight: bold;"> ACHARYA GROUP OF EDUCATION</h5></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
@@ -90,7 +90,7 @@
 	   
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="index.php" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="index.html" class="nav-link pl-0">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	        	<li class="nav-item"><a href="project.html" class="nav-link">Projects</a></li>
 	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
@@ -108,7 +108,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread">Contact Us</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -152,12 +152,12 @@
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">First Name</label>
-                  <input type="text" id="fname" class="form-control" name="fname" required>
+                  <label class="text-black" for="fname">Full Name</label>
+                  <input type="text" id="fname" class="form-control" name="name" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="text-black" for="lname">Last Name</label>
-                  <input type="text" id="lname" class="form-control" name="lname" required>
+                  <label class="text-black" for="lname">Phone no.</label>
+                  <input type="text" id="lname" class="form-control" name="phone" required>
                 </div>
               </div>
 
@@ -172,15 +172,15 @@
               <div class="row form-group">
                 
                 <div class="col-md-12">
-                  <label class="text-black" for="subject">Subject</label> 
-                  <input type="subject" id="subject" class="form-control" name="subject" required>
+                  <label class="text-black" for="subject">Qualification</label> 
+                  <input type="subject" id="subject" class="form-control" name="qualification" required>
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="text-black" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                  <label class="text-black" for="message">Address</label> 
+                  <textarea name="address" id="message" cols="30" rows="7" class="form-control" placeholder="Write your Address with pincode..."></textarea>
                 </div>
               </div>
 
@@ -189,7 +189,7 @@
                   <input type="submit" value="Send Message" id="btnSubmit" class="btn btn-primary btn-md text-white">
                 </div>
               </div>
-
+              <div id="msg"></div>
   
             </form>
             <script>
@@ -198,13 +198,14 @@
               jQuery('#msg').html('Please wait...');
               jQuery('#btnSubmit').attr('disabled',true);
               jQuery.ajax({
-                url:'https://script.google.com/macros/s/AKfycbxm8Pl0MOR1Fg0xWpHvcnp3HljwYpjovfr_6Y53Fvp6sW5yzUufNQxt4TFQP74H01STjw/exec',
+                url:'https://script.google.com/macros/s/AKfycbyRDFgl06Elo3G5oZt1y6_Rpl2m4n17jhjj2N7bGTZ_EYK4mgvgO2TytKB7pzVcrGMIoA/exec',
                 type:'post',
                 data:jQuery('#frmSubmit').serialize(),
                 success:function(result){
                   jQuery('#frmSubmit')[0].reset();
                 alert('Form has been Submitted!');
                   jQuery('#btnSubmit').attr('disabled',false);
+                  jQuery('#msg').html('Thank you...');
                   //window.location.href='';
                 }
               });
@@ -259,7 +260,7 @@
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
 				  
-                <li><a href="index.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
                 <li><a href="#about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
                 <li><a href="#courses"><span class="ion-ios-arrow-round-forward mr-2"></span>Courses</a></li>
                 <li><a href="#services"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
